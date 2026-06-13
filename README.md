@@ -1,22 +1,17 @@
 # Sonar Rock vs Mine Prediction
 
-A Machine Learning project that predicts whether an underwater object is a Rock or a Mine using Sonar signal data.
+A Machine Learning project that predicts whether an underwater object is a **Rock (R)** or a **Mine (M)** using Sonar signal data and Logistic Regression.
 
 ## Project Overview
 
-This project uses Logistic Regression to classify sonar signals reflected from underwater objects. The model is trained on the Sonar Dataset containing 60 numerical features extracted from sonar returns.
-
-The goal is to determine whether the detected object is:
-
-- Rock (R)
-- Mine (M)
+This project uses a Logistic Regression model to classify sonar signals reflected from underwater objects. The model is trained on the Sonar Dataset and can predict whether the detected object is a rock or a mine.
 
 ## Dataset Information
 
 - Dataset: Sonar Dataset
-- Total Records: 208
+- Total Samples: 208
 - Features: 60
-- Target Classes:
+- Classes:
   - R → Rock
   - M → Mine
 
@@ -34,9 +29,9 @@ The goal is to determine whether the detected object is:
 2. Data Preprocessing
 3. Feature and Label Separation
 4. Train-Test Split
-5. Logistic Regression Model
+5. Logistic Regression Training
 6. Model Evaluation
-7. Predictive System
+7. Prediction System
 
 ---
 
@@ -44,44 +39,43 @@ The goal is to determine whether the detected object is:
 
 ### 1. Data Preparation
 
-![Data Preparation](images/01-data-preparation.png)
+Separating features (X) and labels (Y) from the dataset.
 
-Features and labels were separated before training.
+![Data Preparation](01-data-preparation.png)
 
 ---
 
 ### 2. Train-Test Split
 
-![Train Test Split](images/02-train-test-split.png)
+Splitting the dataset into training and testing sets and initializing the Logistic Regression model.
 
-The dataset was split into training and testing sets using `train_test_split()`.
-
----
-
-### 3. Model Training
-
-![Model Training](images/03-model-training.png)
-
-Logistic Regression model was trained using the training dataset.
+![Train Test Split](02-train-test-split.png)
 
 ---
 
-### 4. Model Evaluation
+### 3. Model Evaluation
 
-![Model Evaluation](images/04-model-evaluation.png)
+Evaluating model performance on training and testing data.
 
-Results:
+**Results:**
+- Training Accuracy: **83.42%**
+- Testing Accuracy: **76.19%**
 
-- Training Accuracy: 83.42%
-- Testing Accuracy: 76.19%
+![Model Evaluation](03-model-evaluation.png)
 
 ---
 
-### 5. Prediction System
+### 4. Prediction System
 
-![Prediction System](images/05-prediction-system.png)
+Making predictions on new sonar signal data.
 
-The trained model successfully predicts whether the object is a Rock or Mine based on sonar input data.
+Prediction Result:
+
+```text
+The object is a Mine
+```
+
+![Prediction System](04-prediction-system.png)
 
 ---
 
@@ -89,16 +83,14 @@ The trained model successfully predicts whether the object is a Rock or Mine bas
 
 ### Logistic Regression
 
-Logistic Regression is a supervised machine learning algorithm commonly used for binary classification problems.
-
-Since the target variable has only two classes (Rock and Mine), Logistic Regression is a suitable choice.
+Logistic Regression is a supervised machine learning algorithm used for binary classification problems. Since the target variable contains only two classes (Rock and Mine), Logistic Regression is an effective choice for this project.
 
 ## How to Run
 
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Sonar-Rock-vs-Mine-Prediction.git
+git clone https://github.com/pranavm107/Sonar-Rock-vs-Mine-Prediction.git
 ```
 
 ### Install Dependencies
@@ -107,10 +99,10 @@ git clone https://github.com/your-username/Sonar-Rock-vs-Mine-Prediction.git
 pip install numpy pandas scikit-learn
 ```
 
-### Run Project
+### Run the Project
 
 ```bash
-python sonar_prediction.py
+python rock_vs_mine_prediction.py
 ```
 
 ## Project Structure
@@ -131,15 +123,18 @@ Sonar-Rock-vs-Mine-Prediction/
     └── 05-prediction-system.png
 ```
 
-## Future Improvements
+## Learning Outcomes
 
-- Hyperparameter Tuning
-- Cross Validation
-- Streamlit Web Application
-- Model Deployment
+- Data Preprocessing
+- Feature Selection
+- Binary Classification
+- Logistic Regression
+- Train-Test Split
+- Model Evaluation
+- Prediction Systems
 
 ## Author
 
-Pranav Agneesh
+**Pranav Agneesh**
 
-Machine Learning Project Series | Day 1 of #30Days30MLProjects
+Day 1 of **#30Days30MLProjects**
