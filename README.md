@@ -41,7 +41,7 @@ This project uses a Logistic Regression model to classify sonar signals reflecte
 
 Separating features (X) and labels (Y) from the dataset.
 
-![Data Preparation](01-data-preparation.png)
+![Data Preparation](images/01-data-preparation.png)
 
 ---
 
@@ -49,7 +49,7 @@ Separating features (X) and labels (Y) from the dataset.
 
 Splitting the dataset into training and testing sets and initializing the Logistic Regression model.
 
-![Train Test Split](02-train-test-split.png)
+![Train Test Split](images/02-train-test-split.png)
 
 ---
 
@@ -61,7 +61,7 @@ Evaluating model performance on training and testing data.
 - Training Accuracy: **83.42%**
 - Testing Accuracy: **76.19%**
 
-![Model Evaluation](03-model-evaluation.png)
+![Model Evaluation](images/03-model-evaluation.png)
 
 ---
 
@@ -75,7 +75,7 @@ Prediction Result:
 The object is a Mine
 ```
 
-![Prediction System](04-prediction-system.png)
+![Prediction System](images/04-prediction-system.png)
 
 ---
 
